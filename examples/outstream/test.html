@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<style>
+		.out-of-view {
+			position: fixed !important;
+			right: 0 !important;
+			bottom: -150px !important;
+			transform: scale(0.5);
+		}
+	</style>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-type">
+    <title>NON SRA</title>
+    <!-- Loading Asynchronously -->
+    <script type="text/javascript">
+		Array.$constructor = function () {
+			for (i = 0; i < this.length; i++) {
+				this[i] = this[i].toUpperCase();
+			}
+		};
+
+
+    </script>
+    <script type="text/javascript">
+		window.PWT = window.PWT || {};
+		(function () {
+			var purl = window.location.href;
+			var url = '//ads.pubmatic.com/AdServer/js/pwt/5890';
+			var profileId = '';
+			var profileVersionId = '';
+			if (purl.indexOf('profileid=') > 0) {
+				var regexp = /profileid=(.*?)(&|$)/g;
+				var matches = regexp.exec(purl);
+				if (matches.length >= 2 && matches[1].length > 0) {
+					profileId = '/' + matches[1];
+				}
+			}
+			if (purl.indexOf('pwtv=') > 0) {
+				var regexp = /pwtv=(.*?)(&|$)/g;
+				var matches = regexp.exec(purl);
+				if (matches.length >= 2 && matches[1].length > 0) {
+					profileVersionId = '/' + matches[1];
+				}
+			}
+			var wtads = document.createElement('script');
+			wtads.async = true;
+			wtads.type = 'text/javascript';
+			wtads.src = './owt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(wtads, node);
+		})();
+
+
+    </script>
+    <script type='text/javascript'>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function () {
+			setTimeout(function () {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'https:') +
+					'//securepubads.g.doubleclick.net/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+			}, 200); // Adding 250ms delay to gpt.js for PubMatic script to load
+		})();
+
+
+    </script>
+    <script type="text/javascript">
+		
+		googletag.cmd.push(function () {
+			//var s1=googletag.defineSlot('/43743431/DMDemo', [[300, 250]], 'Div1').addService(googletag.pubads());
+			var s1 = googletag.defineSlot('/43743431/DMDemo', [
+				[728, 90]
+			], 'Div1').addService(googletag.pubads());
+			s1.setTargeting('a', [1]);
+			s1.setTargeting('b', [2]);
+			s1.setTargeting('c', 3);
+			s1.setTargeting('d', ['a', 'b', 'c']);
+			//s1.setSafeFrameConfig({allowPushExpansion: true, sandbox:true});																																	
+			// common targetings
+			googletag.pubads().setTargeting('v', 'classifieds');
+			googletag.pubads().setTargeting('cpage', 'browseads');
+			googletag.pubads().setTargeting('article-id', '65207');
+			googletag.pubads().setTargeting('automation', '1');
+			googletag.enableServices();
+			if ("undefined" != typeof (PWT) && typeof (PWT.addKeyValuePairsToGPTSlots) == "function") {
+				PWT.requestBids(
+					PWT.generateConfForGPT(googletag.pubads().getSlots()),
+					function (adUnitsArray) {
+						console.log("AdUnitsArray", adUnitsArray);
+						PWT.addKeyValuePairsToGPTSlots(adUnitsArray);
+						googletag.display('Div1');
+					}
+				);
+			}
+		});
+    </script>
+<script>
+
+	function onScrollEnd(callback, delay = 150) {
+	  let isScrolling;
+	
+	  window.addEventListener('scroll', () => {
+		// Clear our timeout throughout the scroll
+		window.clearTimeout(isScrolling);
+	
+		// Set a timeout to run after scrolling ends
+		isScrolling = setTimeout(() => {
+		  // Run the callback function
+		  callback();
+		}, delay);
+	  });
+	}
+	// Example usage
+	document.addEventListener('DOMContentLoaded', () => {
+	  const div = document.getElementById('Div1');
+	  if (!div) return;
+	  onScrollEnd(() => {
+		console.log('User has stopped scrolling');
+		const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+		var rect = div.getBoundingClientRect();
+		// Check if the entire div is out of view
+		if (rect.bottom < 0 || rect.top > viewportHeight) {
+		  // Add 'out-of-view' class when div is out of view
+		  div.classList.add('out-of-view');  
+		} else {
+		  div.classList.remove('out-of-view');
+		}
+		// Add your desired functionality here
+	  }, 100); // Delay of 150 milliseconds
+	});
+	
+</script>
+</head>
+<body style="height: 1800px; margin:50px 200px; font-family: 'system-ui';line-height: 1.6; font-size: 17px;" id="body">
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<br/> <br/>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<br/><br/>
+	<h2>OpenWrap - Prebid Video -- video.js</h2>
+	<div>
+<br>
+<div>
+	<div id='Div1' style="height: 600px; width: 500px; float: left;"></div>
+	<div style="width: 45%; float: right; margin-top: 50px; margin-bottom: 50px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<br/> <br/>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		
+	</div>
+</div>
+
+
+
+<div style="display: flex; width: 100%;">   
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div style="display: block; width: 100%; margin-top: 50px;">
+	<div style="float: left; width: 45%;">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div style="float: right; width: 45%;">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<br/> <br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</div>
+
+</body>
+</html>
