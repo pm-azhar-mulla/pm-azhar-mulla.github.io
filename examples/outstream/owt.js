@@ -23539,7 +23539,7 @@
     exports.slotConfig = {
         configPattern: "_AU_",
         config: {
-            "/43743431/QAVideo": {
+            "/43743431/DMDemo": {
                 banner: {
                     enabled: !0
                 },
