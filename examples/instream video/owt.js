@@ -23412,9 +23412,9 @@
     /***/ (function(module, exports) {
     
     exports.pwt = {
-        pid: "61738",
+        pid: "5629",
         gcv: "172",
-        pdvid: "1",
+        pdvid: "10",
         pubid: "5890",
         dataURL: "t.pubmatic.com/wl?",
         winURL: "t.pubmatic.com/wt?",
