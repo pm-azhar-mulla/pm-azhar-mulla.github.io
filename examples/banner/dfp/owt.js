@@ -20610,7 +20610,7 @@
       bidderCode: BIDDER_CODE
     });
     var LOG_WARN_PREFIX = 'PubMatic: ';
-    var ENDPOINT = 'https://hbopenbid.pubmatic.com:8443/translator';
+    var ENDPOINT = 'https://hbopenbid.pubmatic.com/translator';
     var USER_SYNC_URL_IFRAME = 'https://ads.pubmatic.com/AdServer/js/user_sync.html?kdntuid=1&p=';
     var USER_SYNC_URL_IMAGE = 'https://image8.pubmatic.com/AdServer/ImgSync?p=';
     var DEFAULT_CURRENCY = 'USD';
