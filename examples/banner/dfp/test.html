@@ -68,7 +68,7 @@ Array.$constructor = function() {
 				s1.setTargeting('c', 3);
 				s1.setTargeting('d', ['a', 'b', 'c']);	
 				
-				var s2=googletag.defineSlot('/43743431/DMDemo1', [[728, 90]], 'Div2').addService(googletag.pubads());
+				var s2=googletag.defineSlot('/43743431/DMDemo1', [[300,250],[728, 90]], 'Div2').addService(googletag.pubads());
 				s2.setTargeting('a', [1]);
 				s2.setTargeting('b', [2]);
 				s2.setTargeting('c', 3);
@@ -87,7 +87,7 @@ Array.$constructor = function() {
 				setTimeout(function(){
 					console.log("Calling second slot")
 					googletag.display('Div2');
-				}, 6000);
+				}, 2000);
 			});
 			
 		</script>
@@ -105,7 +105,7 @@ Array.$constructor = function() {
 		<div id='Div1'>				
 		</div>
 
-		Adslot : /43743431/DMDemo
+		Adslot : /43743431/DMDemo1
 		<br>
 		<div id='Div2'>				
 		</div>
