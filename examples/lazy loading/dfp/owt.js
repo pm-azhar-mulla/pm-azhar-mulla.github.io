@@ -27527,88 +27527,47 @@ if (!window.owpbjs || !window.owpbjs.libLoaded) {
    /***/ (function(module, exports) {
    
    exports.pwt = {
-    pid: "5629",
-    gcv: "224",
-    pdvid: "10",
-    pubid: "5890",
+    pid: "85271111",
+    gcv: "1421111",
+    pdvid: "1",
+    pubid: "58901111",
     dataURL: "t.pubmatic.com/wl?",
     winURL: "t.pubmatic.com/wt?",
-    owv: "nightly_upgrade_8_16_aug_2_30_PM",
-    pbv: "v8.2.0",
-    usePBSAdapter: "0",
+    owv: "native-psame-4",
+    pbv: "v4.25.0",
     reduceCodeSize: "1",
     metaDataPattern: 0,
     sendAllBids: "0",
     adserver: "DFP",
-    gdpr: 0,
+    gdpr: "0",
     cmp: 0,
     gdprTimeout: 0,
     awc: 0,
     platform: "display",
     refreshInterval: 0,
-    priceGranularity: 'custom',
-    priceGranularityBuckets: {
-      "ranges" : [{
-          "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
-          "max" : 4,
-          "increment" : 0.01  // from $0 to $5, 1-cent increments
-        },
-        {
-          "max" : 8,
-          "increment" : 0.5  // from $5 to $8, round down to the previous 5-cent increment
-        },
-        {
-          "max" : 40,
-          "increment" : 0.5   // from $8 to $40, round down to the previous 50-cent increment
-        }]
-    },
+    priceGranularity: 0,
     adServerCurrency: 0,
-    singleImpression: "0",
-    identityEnabled: 0,
+    singleImpression: "1",
+    identityEnabled: "0",
     identityConsumers: 0,
-    ccpa: 0,
+    ccpa: "0",
     ccpaCmpApi: 0,
     ccpaTimeout: 0,
-    sChain: 0,
     sChainObj: 0,
-    auTimeout: "4000",
-    t: "4000",
+    auTimeout: "2500",
+    t: "1500",
     ssTimeout: 0,
     prebidObjName: 0,
     pubAnalyticsAdapter: "1",
-    usePBJSKeys: 0,
-    abTestEnabled: 0,
+    usePBJSKeys: "0",
+    abTestEnabled: "0",
     testGroupSize: 0,
     testType: 0,
     granularityMultiplier: 0,
-    floorPriceModuleEnabled: "0",
-    floorSource: "External Floor",
-    floorAuctionDelay: "500",
-    jsonUrl: "https://owsdk-stagingams.pubmatic.com:8443/openwrap/bidfloor/pattern_mediatype.json",
-    ssoEnabled: 0,
-    autoRefreshAdslots: "0",
-    videoAdDuration: 0,
-    videoAdDurationMatching: 0,
-    adPodConfiguration: 0,
-    customPriceGranularityConfig: 0,
-    marketplaceBidders: 0,
-    owRedirectURL: 0,
-    topicsFPDModule: 0,
-    enableVastUnwrapper: 0,
-    floorType: "Hard",
-    pubId: 0,
-    zone: 0,
-    gdprActionTimeout: 0,
-    pbGlobalVarNamespace: 0,
-    owGlobalVarNamespace: 0,
-    globalNamespaceType: 0,
-    gpp: 0,
-    gppCmpApi: 0,
-    gppTimeout: 0,
-    localStorageAccess: "1",
-    dealTierLineItemSetup: 0,
-    dealIdLineItemSetup: 0
-  };
+    usePBSAdapter:"1",
+    sChain: 1,
+    
+};
    
    // singleImpression is used to enable feature of sending single impression for multiple size ad slot earlier there were multiple impression for multiple sizes
    
@@ -27622,17 +27581,50 @@ if (!window.owpbjs || !window.owpbjs.libLoaded) {
    };
    exports.adapters = {
     pubmatic: {
-        publisherId: "5890",
-        kgp: "_AU_@_W_x_H_:_AUI_",
-        sk: "true",
-        timeout: 0,
+        rev_share: "10.0",
         throttle: "100",
-        pt: 0,
-        serverSideEnabled: "0",
-        amp: 0,
-        video: 0,
-        "in-app": 0,
-        display: 0
+        publisherId: "156209",
+        kgp: "_W_x_H_@_W_x_H_:_AUI_",
+        serverSideEnabled: 0
+    },
+    appnexus: {
+        rev_share: "20.0",
+        throttle: "100",
+        abc: 123,
+        kgp: "_DIV_",
+        serverSideEnabled: 0,
+        klm: {
+            "Div1": {
+                placementId: "8801674",
+                "video.mimes": "",
+                "video.minduration": ""
+            },
+            "Div-2": {
+                placementId: "8801685"
+            }
+        },
+        bidderConfig:{
+            'schain':{
+                "validation": "off",
+                "config": {
+                    "ver":"2.0",
+                    "complete": 1,
+                    "nodes": [
+                        {
+                           "asi":"indirectseller-3.com",
+                           "sid":"00001",
+                           "hp":1
+                        },
+        
+                        {
+                           "asi":"indirectseller-4.com",
+                           "sid":"00002",
+                           "hp":1
+                        }
+                    ]
+                }
+            }
+        }
     }
 };
 
