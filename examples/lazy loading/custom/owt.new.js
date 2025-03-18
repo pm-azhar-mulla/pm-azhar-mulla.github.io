@@ -23259,7 +23259,7 @@ if (!window.owpbjs || !window.owpbjs.libLoaded) {
    
    var BIDDER_CODE = 'pubmatic';
    var LOG_WARN_PREFIX = 'PubMatic: ';
-   var ENDPOINT = 'https://hbopenbid.pubmatic.com:8443/translator';
+   var ENDPOINT = 'https://hbopenbid.pubmatic.com/translator';
    var USER_SYNC_URL_IFRAME = 'https://ads.pubmatic.com/AdServer/js/user_sync.html?kdntuid=1&p=';
    var USER_SYNC_URL_IMAGE = 'https://image8.pubmatic.com/AdServer/ImgSync?p=';
    var DEFAULT_CURRENCY = 'USD';
@@ -28196,9 +28196,9 @@ if (!window.owpbjs || !window.owpbjs.libLoaded) {
    /***/ (function(module, exports) {
    
    exports.pwt = {
-       pid: "42461",
+       pid: "5629",
        gcv: "172",
-       pdvid: "1",
+       pdvid: "14",
        pubid: "5890",
        dataURL: "t.pubmatic.com/wl?",
        winURL: "t.pubmatic.com/wt?",
