@@ -28262,20 +28262,7 @@ if (!window.owpbjs || !window.owpbjs.libLoaded) {
      "t": 5000
    };
    exports.adapters = {
-       pubmatic: {
-           publisherId: "5890",
-           kgp: "_W_x_H_@_W_x_H_:_AUI_",
-           sk: "true",
-           rev_share: "0.0",
-           timeout: 0,
-           throttle: "100",
-           pt: 0,
-           serverSideEnabled: "0",
-           amp: 0,
-           video: 0,
-           "in-app": 0,
-           display: 0
-       }
+    pubmatic: { publisherId: "5890", kgp: "_AU_@_W_x_H_:_AUI_", sk: "true", rev_share: "0.0", timeout: 0, throttle: "100", pt: 0, serverSideEnabled: "0", amp: 0, video: 0, "in-app": 0, display: 0, bidderOrder: 0 }
    };
    exports.identityPartners = {
      pubCommonId: {

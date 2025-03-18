@@ -27580,52 +27580,7 @@ if (!window.owpbjs || !window.owpbjs.libLoaded) {
      "t": 5000
    };
    exports.adapters = {
-    pubmatic: {
-        rev_share: "10.0",
-        throttle: "100",
-        publisherId: "156209",
-        kgp: "_W_x_H_@_W_x_H_:_AUI_",
-        serverSideEnabled: 0
-    },
-    appnexus: {
-        rev_share: "20.0",
-        throttle: "100",
-        abc: 123,
-        kgp: "_DIV_",
-        serverSideEnabled: 0,
-        klm: {
-            "Div1": {
-                placementId: "8801674",
-                "video.mimes": "",
-                "video.minduration": ""
-            },
-            "Div-2": {
-                placementId: "8801685"
-            }
-        },
-        bidderConfig:{
-            'schain':{
-                "validation": "off",
-                "config": {
-                    "ver":"2.0",
-                    "complete": 1,
-                    "nodes": [
-                        {
-                           "asi":"indirectseller-3.com",
-                           "sid":"00001",
-                           "hp":1
-                        },
-        
-                        {
-                           "asi":"indirectseller-4.com",
-                           "sid":"00002",
-                           "hp":1
-                        }
-                    ]
-                }
-            }
-        }
-    }
+    pubmatic: { publisherId: "5890", kgp: "_AU_@_W_x_H_:_AUI_", sk: "true", rev_share: "0.0", timeout: 0, throttle: "100", pt: 0, serverSideEnabled: "0", amp: 0, video: 0, "in-app": 0, display: 0, bidderOrder: 0 }
 };
 
    exports.identityPartners = {
